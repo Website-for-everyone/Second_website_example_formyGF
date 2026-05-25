@@ -5,8 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    // ИСПРАВЛЕНО: Указан правильный путь к твоему репозиторию на GitHub Pages
-    base: '/second_website_example_formygf/',
+    // ИСПРАВЛЕНО: Относительный путь позволит сайту без ошибок находить стили и JS на GitHub Pages
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
