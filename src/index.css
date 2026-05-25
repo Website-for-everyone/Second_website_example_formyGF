@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #F5F5F7;
+    color: #1D1D1F;
+    overflow-x: hidden;
+  }
+}
+
+.font-comfortaa {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphism Classes for Apple aesthetic */
+.apple-glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.apple-glass-dark {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: rgba(20, 20, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Keyframe Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.5)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.8)); }
+}
+
+.animate-pulse-heart {
+  animation: pulse-heart 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes sound-wave-bar {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.sound-bar {
+  animation: sound-wave-bar 0.8s ease-in-out infinite;
+}
+
+/* Hide scrollbars for cinematic view but keep functional scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shimmer-glow {
+  0% { background-position: 0% 50%; filter: drop-shadow(0 0 1px rgba(124, 58, 237, 0.05)); }
+  50% { background-position: 100% 50%; filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.3)); }
+  100% { background-position: 0% 50%; filter: drop-shadow(0 0 1px rgba(124, 58, 237, 0.05)); }
+}
+
+.text-shimmer-glow {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA, #EC4899, #3B82F6, #7C3AED);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-glow 5s ease infinite;
+}
+
+@keyframes line-reveal {
+  0% { 
+    opacity: 0; 
+    filter: blur(8px); 
+    transform: translateY(30px) scale(0.95);
+    letter-spacing: -0.05em;
+  }
+  100% { 
+    opacity: 1; 
+    filter: blur(0); 
+    transform: translateY(0) scale(1);
+    letter-spacing: -0.01em;
+  }
+}
+
+.animate-line-reveal-1 {
+  animation: line-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-line-reveal-2 {
+  animation: line-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.animate-line-reveal-3 {
+  animation: line-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+}
+
+.animate-line-reveal-4 {
+  animation: line-reveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both;
+}

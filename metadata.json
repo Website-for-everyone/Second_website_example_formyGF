@@ -1,0 +1,8 @@
+{
+  "name": "Luxury Minimalist Showcase Second website example",
+  "description": "A premium single-page layout featuring iOS-inspired glassmorphism, smooth GSAP animations, and interactive PIN security for elegant digital storytelling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
